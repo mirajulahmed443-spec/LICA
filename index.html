@@ -1,0 +1,1244 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LICA – Light Camera Action Cafe | Guwahati</title>
+<meta name="description" content="Discover LICA – Light Camera Action Cafe in Beltola Tiniali, Guwahati. Enjoy a warm cinema-inspired café atmosphere, food, drinks and casual dining. A cafe in Guwahati where food meets the magic of cinema.">
+<meta name="keywords" content="Cafe in Guwahati, Cafe in Beltola, Beltola Tiniali Cafe, Restaurant in Guwahati, Cinema themed cafe in Guwahati, LICA cafe, Light Camera Action Cafe">
+<meta name="theme-color" content="#151515">
+<meta property="og:title" content="LICA – Light Camera Action Cafe | Guwahati">
+<meta property="og:description" content="Where great food meets the magic of cinema. A warm, cinema-inspired cafe in Beltola Tiniali, Guwahati.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        charcoal: '#151515',
+        ink: '#0E0D0C',
+        brown: '#2A2118',
+        wood: '#6B4328',
+        amber: '#D99A32',
+        gold: '#F0B84B',
+        cream: '#F4EFE5',
+        muted: '#8B857C',
+        red: '#D62F25'
+      },
+      fontFamily: {
+        display: ['"Instrument Serif"', 'Georgia', 'serif'],
+        cinema: ['Oswald', 'Impact', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "LICA – Light Camera Action Cafe",
+  "description": "Cinema-inspired cafe in Beltola Tiniali, Guwahati offering food, drinks and casual dining in a warm, film-themed atmosphere.",
+  "servesCuisine": ["Cafe", "Continental", "Indian", "Chinese"],
+  "priceRange": "₹200–₹400 per person",
+  "telephone": "070021 96780",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1st Floor, Aruna Tower, Below CEC Centre, Lakhimi Path, Main Road, Beltola Tiniali",
+    "addressLocality": "Guwahati",
+    "addressRegion": "Assam",
+    "postalCode": "781028",
+    "addressCountry": "IN"
+  },
+  "sameAs": ["https://www.instagram.com/cafelica22"],
+  "openingHours": "Mo-Su 10:00-23:00"
+}
+</script>
+<style>
+  :root{ --amber:#D99A32; --gold:#F0B84B; --cream:#F4EFE5; }
+  *{ -webkit-tap-highlight-color: transparent; }
+  html{ scroll-behavior:smooth; scroll-padding-top:96px; }
+  body{ background:#151515; color:var(--cream); overflow-x:hidden; }
+  ::selection{ background:var(--amber); color:#151515; }
+
+  /* ---------- Focus & a11y ---------- */
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+    outline:2px solid var(--gold); outline-offset:3px; border-radius:2px;
+  }
+  .skip{ position:absolute; left:-999px; top:0; z-index:200; background:var(--amber); color:#151515; padding:.75rem 1.25rem; font-weight:700; }
+  .skip:focus{ left:1rem; top:1rem; }
+
+  /* ---------- Film grain ---------- */
+  .grain{ position:relative; }
+  .grain::after{
+    content:''; position:absolute; inset:0; pointer-events:none; z-index:3;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+    opacity:.075; mix-blend-mode:overlay; animation:grainShift 1.6s steps(3) infinite;
+  }
+  @keyframes grainShift{
+    0%{transform:translate(0,0)} 33%{transform:translate(-2%,1%)} 66%{transform:translate(1%,-2%)} 100%{transform:translate(0,0)}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero-img{ animation:slowZoom 26s ease-out forwards; }
+  @keyframes slowZoom{ from{ transform:scale(1.02) } to{ transform:scale(1.13) } }
+
+  .line-mask{ overflow:hidden; display:block; }
+  .line-mask > span{ display:block; transform:translateY(115%); opacity:0; animation:lineUp 1.15s cubic-bezier(.16,1,.3,1) forwards; }
+  @keyframes lineUp{ to{ transform:translateY(0); opacity:1 } }
+
+  .fade-in{ opacity:0; animation:fadeIn 1.2s ease forwards; }
+  @keyframes fadeIn{ to{ opacity:1 } }
+
+  .scroll-cue span{ display:block; width:1px; height:54px; background:linear-gradient(to bottom, rgba(240,184,75,0), rgba(240,184,75,.9)); transform-origin:top; animation:cue 2.4s ease-in-out infinite; }
+  @keyframes cue{ 0%{transform:scaleY(.2);opacity:0} 40%{transform:scaleY(1);opacity:1} 100%{transform:scaleY(1) translateY(54px);opacity:0} }
+
+  .corner{ position:absolute; width:26px; height:26px; border:1px solid rgba(240,184,75,.5); z-index:4; }
+
+  /* ---------- Buttons ---------- */
+  .btn{ position:relative; overflow:hidden; display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+        font-family:Oswald, sans-serif; letter-spacing:.16em; text-transform:uppercase; font-size:.78rem; font-weight:500;
+        padding:.95rem 1.7rem; transition:background-color .35s ease, color .35s ease, border-color .35s ease, transform .35s cubic-bezier(.16,1,.3,1); }
+  .btn::after{ content:''; position:absolute; inset:0; background:linear-gradient(100deg, transparent 25%, rgba(255,255,255,.32) 50%, transparent 75%);
+               transform:translateX(-130%); transition:transform .9s cubic-bezier(.16,1,.3,1); }
+  .btn:hover::after{ transform:translateX(130%); }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-amber{ background:var(--amber); color:#151515; }
+  .btn-amber:hover{ background:var(--gold); }
+  .btn-ghost{ border:1px solid rgba(244,239,229,.35); color:var(--cream); }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold); }
+  .btn-dark{ background:#2A2118; color:var(--cream); border:1px solid rgba(240,184,75,.25); }
+  .btn-dark:hover{ border-color:var(--gold); color:var(--gold); }
+
+  /* ---------- Film strip ---------- */
+  .filmstrip{ background:#0B0B0B; border-top:1px solid rgba(244,239,229,.08); border-bottom:1px solid rgba(244,239,229,.08); overflow:hidden; }
+  .perf{ height:9px; background-image:repeating-linear-gradient(to right, rgba(244,239,229,.26) 0 13px, rgba(0,0,0,0) 13px 34px);
+         background-size:34px 9px; animation:perfMove 9s linear infinite; }
+  .perf.rev{ animation-direction:reverse; }
+  @keyframes perfMove{ to{ background-position:-34px 0 } }
+  .strip-mid{ height:26px; display:flex; align-items:center; gap:1.2rem; padding:0 .5rem; overflow:hidden; }
+  .strip-track{ display:flex; gap:2.2rem; white-space:nowrap; animation:stripMove 34s linear infinite; font-family:Oswald,sans-serif; font-size:.62rem; letter-spacing:.42em; color:rgba(139,133,124,.75); }
+  @keyframes stripMove{ to{ transform:translateX(-50%) } }
+
+  /* ---------- Reveals ---------- */
+  [data-reveal]{ opacity:0; transform:translateY(26px); transition:opacity 1s cubic-bezier(.16,1,.3,1) var(--d,0s), transform 1s cubic-bezier(.16,1,.3,1) var(--d,0s); }
+  [data-reveal].is-in{ opacity:1; transform:none; }
+  [data-reveal="mask"]{ opacity:1; transform:none; clip-path:inset(0 0 100% 0); transition:clip-path 1.25s cubic-bezier(.7,0,.2,1) var(--d,0s); }
+  [data-reveal="mask"].is-in{ clip-path:inset(0 0 0% 0); }
+  [data-reveal="mask"] img{ transform:scale(1.16); transition:transform 1.8s cubic-bezier(.16,1,.3,1) var(--d,0s); }
+  [data-reveal="mask"].is-in img{ transform:scale(1); }
+
+  /* ---------- Media hover ---------- */
+  .zoomwrap{ overflow:hidden; position:relative; background:#2A2118; }
+  .zoomwrap img{ transition:transform 1.1s cubic-bezier(.16,1,.3,1), filter .8s ease; will-change:transform; }
+  .zoomwrap:hover img{ transform:scale(1.06); filter:brightness(1.05); }
+  .card-lift{ transition:transform .6s cubic-bezier(.16,1,.3,1), border-color .5s ease, background-color .5s ease; }
+  .card-lift:hover{ transform:translateY(-6px); border-color:rgba(240,184,75,.45); }
+
+  /* ---------- Nav ---------- */
+  .nav-link{ position:relative; font-family:Oswald,sans-serif; letter-spacing:.18em; font-size:.74rem; text-transform:uppercase; color:rgba(244,239,229,.78); transition:color .35s ease; }
+  .nav-link::after{ content:''; position:absolute; left:0; bottom:-6px; height:1px; width:0; background:var(--gold); transition:width .45s cubic-bezier(.16,1,.3,1); }
+  .nav-link:hover{ color:var(--gold); }
+  .nav-link:hover::after{ width:100%; }
+  .nav-link.active{ color:var(--cream); }
+  .nav-link.active::after{ width:100%; background:var(--amber); }
+
+  header#site-header{ transition:background-color .5s ease, backdrop-filter .5s ease, border-color .5s ease, padding .5s ease; }
+  header#site-header.scrolled{ background:rgba(21,21,21,.88); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(244,239,229,.08); }
+
+  .menu-panel{ transition:opacity .5s ease, visibility .5s ease; }
+  .menu-panel .mlink{ opacity:0; transform:translateY(18px); transition:opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+  .menu-panel.open .mlink{ opacity:1; transform:none; }
+
+  /* ---------- Filters ---------- */
+  .chip{ font-family:Oswald,sans-serif; letter-spacing:.16em; text-transform:uppercase; font-size:.7rem; padding:.55rem 1.05rem;
+         border:1px solid rgba(244,239,229,.16); color:rgba(244,239,229,.7); transition:all .35s ease; white-space:nowrap; }
+  .chip:hover{ border-color:rgba(240,184,75,.6); color:var(--gold); }
+  .chip.active{ background:var(--amber); border-color:var(--amber); color:#151515; }
+
+  /* ---------- Path drawing ---------- */
+  .draw [data-draw]{ stroke-dasharray:1; stroke-dashoffset:1; }
+  .draw.is-in [data-draw]{ animation:drawIn 1.8s cubic-bezier(.5,0,.2,1) forwards; }
+  @keyframes drawIn{ to{ stroke-dashoffset:0 } }
+  .beam{ opacity:0; transition:opacity 1.4s ease .9s; }
+  .draw.is-in .beam{ opacity:1; animation:beamPulse 6s ease-in-out 2s infinite; }
+  @keyframes beamPulse{ 0%,100%{opacity:.55} 50%{opacity:.85} }
+
+  /* ---------- Lightbox ---------- */
+  #lightbox{ opacity:0; visibility:hidden; transition:opacity .45s ease, visibility .45s ease; }
+  #lightbox.open{ opacity:1; visibility:visible; }
+  #lightbox img{ transform:scale(.96); transition:transform .55s cubic-bezier(.16,1,.3,1); }
+  #lightbox.open img{ transform:scale(1); }
+  .lb-btn{ transition:background-color .3s ease, color .3s ease, transform .3s ease; }
+  .lb-btn:hover{ background:var(--amber); color:#151515; }
+
+  /* ---------- Misc ---------- */
+  .eyebrow{ font-family:Oswald,sans-serif; letter-spacing:.34em; text-transform:uppercase; font-size:.7rem; color:var(--amber); }
+  .rule-amber{ width:56px; height:1px; background:var(--amber); }
+  .bg-wood{ background:#2A2118; }
+  .noise-panel{ background-image:linear-gradient(180deg, rgba(42,33,24,.85), rgba(21,21,21,.95)); }
+  .atmos-bg{ background-attachment:scroll; }
+  @media(min-width:1024px){ .atmos-bg{ background-attachment:fixed; } }
+
+  .tabular{ font-variant-numeric:tabular-nums; }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::after, *::before{ animation:none !important; transition-duration:.01ms !important; }
+    [data-reveal]{ opacity:1 !important; transform:none !important; clip-path:none !important; }
+    .hero-img{ transform:none !important; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body class="font-sans bg-charcoal text-cream antialiased">
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 py-4 md:py-5">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8 flex items-center justify-between gap-6">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-3 group" aria-label="LICA – Light Camera Action Cafe, home">
+      <svg viewBox="0 0 44 30" class="w-9 h-7 md:w-10 md:h-8 text-cream transition-colors duration-500 group-hover:text-gold" aria-hidden="true">
+        <rect x="1.2" y="8.2" width="41.6" height="20.4" rx="3.4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M12 8.2V4.4h9.4v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="22" cy="18.4" r="6.4" fill="none" stroke="#D99A32" stroke-width="1.5"/>
+        <circle cx="22" cy="18.4" r="2.5" fill="#D62F25"/>
+        <rect x="33.4" y="11.6" width="6" height="2.8" rx="1.2" fill="#D99A32"/>
+      </svg>
+      <span class="leading-none">
+        <span class="block font-cinema tracking-[.42em] text-[1.15rem] md:text-[1.3rem] font-500">LICA</span>
+        <span class="block text-[.52rem] md:text-[.56rem] tracking-[.32em] text-muted mt-1 uppercase">Light · Camera · Action</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-9" aria-label="Primary">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#order" class="btn btn-amber hidden sm:inline-flex">Order Online</a>
+      <button id="menu-toggle" class="lg:hidden w-11 h-11 flex flex-col items-center justify-center gap-[5px] border border-cream/25" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="block w-5 h-[1.5px] bg-cream transition-transform duration-300"></span>
+        <span class="block w-5 h-[1.5px] bg-cream transition-opacity duration-300"></span>
+        <span class="block w-5 h-[1.5px] bg-cream transition-transform duration-300"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="menu-panel fixed inset-0 z-[60] bg-ink/98 backdrop-blur-md invisible opacity-0 flex flex-col" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="filmstrip shrink-0"><div class="perf"></div><div class="strip-mid"><div class="strip-track"><span>LICA · LIGHT CAMERA ACTION CAFE · BELTOLA TINIALI · GUWAHATI ·&nbsp;</span><span>LICA · LIGHT CAMERA ACTION CAFE · BELTOLA TINIALI · GUWAHATI ·&nbsp;</span></div></div><div class="perf rev"></div></div>
+  <div class="flex-1 overflow-y-auto px-6 py-8 flex flex-col">
+    <div class="flex items-center justify-between">
+      <span class="font-cinema tracking-[.42em] text-lg">LICA</span>
+      <button id="menu-close" class="w-11 h-11 border border-cream/25 flex items-center justify-center text-cream hover:bg-amber hover:text-charcoal transition-colors duration-300" aria-label="Close menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+    <nav class="mt-12 flex flex-col gap-2" aria-label="Mobile">
+      <a href="#home" class="mlink group flex items-baseline gap-4 py-3 border-b border-cream/10" style="transition-delay:.08s"><span class="eyebrow">01</span><span class="font-display text-4xl group-hover:text-gold transition-colors duration-300">Home</span></a>
+      <a href="#about" class="mlink group flex items-baseline gap-4 py-3 border-b border-cream/10" style="transition-delay:.14s"><span class="eyebrow">02</span><span class="font-display text-4xl group-hover:text-gold transition-colors duration-300">About</span></a>
+      <a href="#menu" class="mlink group flex items-baseline gap-4 py-3 border-b border-cream/10" style="transition-delay:.2s"><span class="eyebrow">03</span><span class="font-display text-4xl group-hover:text-gold transition-colors duration-300">Menu</span></a>
+      <a href="#experience" class="mlink group flex items-baseline gap-4 py-3 border-b border-cream/10" style="transition-delay:.26s"><span class="eyebrow">04</span><span class="font-display text-4xl group-hover:text-gold transition-colors duration-300">Experience</span></a>
+      <a href="#gallery" class="mlink group flex items-baseline gap-4 py-3 border-b border-cream/10" style="transition-delay:.32s"><span class="eyebrow">05</span><span class="font-display text-4xl group-hover:text-gold transition-colors duration-300">Gallery</span></a>
+      <a href="#contact" class="mlink group flex items-baseline gap-4 py-3 border-b border-cream/10" style="transition-delay:.38s"><span class="eyebrow">06</span><span class="font-display text-4xl group-hover:text-gold transition-colors duration-300">Contact</span></a>
+    </nav>
+    <div class="mt-auto pt-10 mlink" style="transition-delay:.44s">
+      <a href="#order" class="btn btn-amber w-full">Order Online</a>
+      <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-muted">
+        <div>
+          <p class="eyebrow mb-2">Call</p>
+          <a href="tel:07002196780" class="text-cream hover:text-gold transition-colors">070021 96780</a>
+        </div>
+        <div>
+          <p class="eyebrow mb-2">Instagram</p>
+          <a href="https://www.instagram.com/cafelica22" target="_blank" rel="noopener" class="text-cream hover:text-gold transition-colors">@cafelica22</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative h-[100svh] min-h-[600px] w-full overflow-hidden grain">
+  <div class="absolute inset-0 z-0">
+    <img class="hero-img w-full h-full object-cover"
+         src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=75"
+         data-fallback="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=75"
+         alt="Warm interior of LICA – Light Camera Action Cafe in Guwahati with wooden furniture and amber lighting" fetchpriority="high">
+    <div class="absolute inset-0 bg-gradient-to-b from-charcoal/85 via-charcoal/55 to-charcoal/95"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,rgba(217,154,50,.16),transparent_60%)]"></div>
+  </div>
+
+  <!-- frame marks -->
+  <div class="corner top-24 left-6 md:left-10 border-r-0 border-b-0"></div>
+  <div class="corner top-24 right-6 md:right-10 border-l-0 border-b-0"></div>
+  <div class="corner bottom-8 left-6 md:left-10 border-r-0 border-t-0"></div>
+  <div class="corner bottom-8 right-6 md:right-10 border-l-0 border-t-0"></div>
+
+  <div class="relative z-10 h-full max-w-[1400px] mx-auto px-5 md:px-8 flex flex-col justify-center pt-24 pb-28">
+    <p class="line-mask mb-5 md:mb-7"><span class="eyebrow" style="animation-delay:.15s">Reel 01 — Beltola Tiniali, Guwahati</span></p>
+    <h1 class="font-display leading-[.82] tracking-[-0.02em]">
+      <span class="line-mask"><span class="text-[22vw] sm:text-[18vw] lg:text-[13rem]" style="animation-delay:.3s">LICA</span></span>
+    </h1>
+    <p class="line-mask mt-4 md:mt-6">
+      <span class="font-cinema tracking-[.34em] text-[.82rem] sm:text-base md:text-xl text-gold" style="animation-delay:.5s">LIGHT <span class="text-cream/50">•</span> CAMERA <span class="text-cream/50">•</span> ACTION CAFE</span>
+    </p>
+    <p class="line-mask mt-6 md:mt-8 max-w-xl">
+      <span class="font-display italic text-xl sm:text-2xl md:text-3xl text-cream/85 leading-snug" style="animation-delay:.68s">“Where great food meets the magic of cinema.”</span>
+    </p>
+    <div class="fade-in mt-9 md:mt-12 flex flex-wrap gap-3 md:gap-4" style="animation-delay:1s">
+      <a href="#menu" class="btn btn-amber">View Menu</a>
+      <a href="#order" class="btn btn-ghost">Order Online</a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-3 scroll-cue">
+    <span></span>
+    <span class="text-[.55rem] tracking-[.35em] text-muted uppercase">Scroll</span>
+  </div>
+  <div class="absolute bottom-10 right-8 z-10 hidden xl:block text-right">
+    <p class="text-[.55rem] tracking-[.35em] text-muted uppercase">Scene 01</p>
+    <p class="text-[.55rem] tracking-[.35em] text-muted uppercase mt-1">Cafe · Food · Cinema</p>
+  </div>
+</section>
+
+<!-- film strip divider -->
+<div class="filmstrip" aria-hidden="true">
+  <div class="perf"></div>
+  <div class="strip-mid"><div class="strip-track">
+    <span>FOOD&nbsp;·&nbsp;CAFÉ&nbsp;·&nbsp;CINEMA&nbsp;·&nbsp;WARM LIGHTS&nbsp;·&nbsp;EASY CONVERSATIONS&nbsp;·&nbsp;</span>
+    <span>FOOD&nbsp;·&nbsp;CAFÉ&nbsp;·&nbsp;CINEMA&nbsp;·&nbsp;WARM LIGHTS&nbsp;·&nbsp;EASY CONVERSATIONS&nbsp;·&nbsp;</span>
+    <span>FOOD&nbsp;·&nbsp;CAFÉ&nbsp;·&nbsp;CINEMA&nbsp;·&nbsp;WARM LIGHTS&nbsp;·&nbsp;EASY CONVERSATIONS&nbsp;·&nbsp;</span>
+    <span>FOOD&nbsp;·&nbsp;CAFÉ&nbsp;·&nbsp;CINEMA&nbsp;·&nbsp;WARM LIGHTS&nbsp;·&nbsp;EASY CONVERSATIONS&nbsp;·&nbsp;</span>
+  </div></div>
+  <div class="perf rev"></div>
+</div>
+
+<!-- ============ ABOUT / BRAND INTRO ============ -->
+<section id="about" class="relative py-24 md:py-36 bg-charcoal">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <!-- Editorial split -->
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="relative">
+        <div class="zoomwrap aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5]" data-reveal="mask">
+          <img loading="lazy" class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1100&q=72"
+               data-fallback="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1100&q=72"
+               alt="Cozy café seating with wood, plants and warm light at LICA Guwahati">
+        </div>
+        <div class="hidden sm:block absolute -bottom-10 -right-2 md:right-6 w-40 md:w-56 zoomwrap shadow-2xl border border-cream/10" data-reveal="mask" style="--d:.25s">
+          <img loading="lazy" class="w-full h-full object-cover aspect-square"
+               src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=72"
+               data-fallback="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=72"
+               alt="A cup of coffee served at the LICA café counter">
+        </div>
+        <div class="absolute -top-4 -left-4 w-16 h-16 border-t border-l border-amber/50" aria-hidden="true"></div>
+      </div>
+
+      <div>
+        <p class="eyebrow" data-reveal>01 — About</p>
+        <h2 class="mt-4 font-cinema text-[2.4rem] sm:text-6xl lg:text-7xl leading-[.95] tracking-[.01em]" data-reveal style="--d:.08s">THE LICA<br>EXPERIENCE</h2>
+        <div class="rule-amber mt-6" data-reveal style="--d:.14s"></div>
+        <p class="mt-8 font-display text-2xl md:text-[2rem] leading-[1.35] text-cream/90" data-reveal style="--d:.2s">
+          “More than a café, LICA is a place where food, conversations and the magic of cinema come together.”
+        </p>
+        <p class="mt-7 text-cream/65 leading-relaxed max-w-xl" data-reveal style="--d:.28s">
+          LICA brings together the relaxed atmosphere of a café with a visual identity inspired by the world of cinema. From its film-inspired décor to its warm lighting and casual dining atmosphere, every detail contributes to an experience designed around food, people and moments.
+        </p>
+        <p class="mt-5 text-cream/65 leading-relaxed max-w-xl" data-reveal style="--d:.34s">
+          A cinema themed cafe in Guwahati for slow breakfasts, quick lunches and long evening conversations — a cafe in Beltola made for people who like their coffee with a little bit of film.
+        </p>
+
+        <div class="mt-10 grid grid-cols-3 gap-4 md:gap-6 max-w-lg" data-reveal style="--d:.4s">
+          <div class="border-t border-cream/15 pt-4">
+            <p class="font-cinema text-lg text-gold">Food</p>
+            <p class="text-xs text-muted mt-1 leading-relaxed">Comforting café favourites</p>
+          </div>
+          <div class="border-t border-cream/15 pt-4">
+            <p class="font-cinema text-lg text-gold">Café</p>
+            <p class="text-xs text-muted mt-1 leading-relaxed">Warm, casual, unhurried</p>
+          </div>
+          <div class="border-t border-cream/15 pt-4">
+            <p class="font-cinema text-lg text-gold">Cinema</p>
+            <p class="text-xs text-muted mt-1 leading-relaxed">Film-inspired identity</p>
+          </div>
+        </div>
+
+        <a href="#experience" class="btn btn-dark mt-10" data-reveal style="--d:.46s">Step Inside LICA</a>
+      </div>
+    </div>
+
+    <!-- Story block -->
+    <div class="mt-28 md:mt-40 grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+      <div class="lg:col-span-5">
+        <p class="eyebrow" data-reveal>02 — The Story</p>
+        <h2 class="mt-4 font-cinema text-[2.2rem] sm:text-5xl lg:text-6xl leading-[.95]" data-reveal style="--d:.08s">THE STORY<br>BEHIND LICA</h2>
+      </div>
+      <div class="lg:col-span-7">
+        <p class="font-display text-xl md:text-2xl leading-[1.5] text-cream/85" data-reveal style="--d:.14s">
+          LICA — Light Camera Action Cafe — is a café, a kitchen and a little bit of a film set. Film cameras on the wall, wooden shelves, hanging greenery and warm amber pendant lamps set the frame; the food and the people complete the shot.
+        </p>
+        <p class="mt-6 text-cream/60 leading-relaxed" data-reveal style="--d:.2s">
+          Whether you are dropping in for a grilled sandwich between classes, settling in with noodles and a conversation, or simply looking for a quiet corner in Beltola Tiniali, LICA keeps things simple: good food, warm lights and an atmosphere that feels like the interval of a good film.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu" class="relative py-24 md:py-32 bg-brown/60">
+  <div class="absolute inset-x-0 top-0 h-px bg-cream/10" aria-hidden="true"></div>
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p class="eyebrow" data-reveal>03 — The Menu</p>
+        <h2 class="mt-4 font-cinema text-[2.4rem] sm:text-6xl lg:text-7xl leading-[.95]" data-reveal style="--d:.08s">FROM OUR KITCHEN</h2>
+      </div>
+      <p class="font-display italic text-xl md:text-2xl text-cream/75 max-w-md md:text-right" data-reveal style="--d:.14s">
+        “Comforting café favourites, served with the LICA touch.”
+      </p>
+    </div>
+
+    <!-- filters -->
+    <div class="mt-12 -mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto" data-reveal style="--d:.2s">
+      <div class="flex gap-2.5 min-w-max pb-1" role="tablist" aria-label="Menu categories">
+        <button class="chip active" role="tab" aria-selected="true" data-filter="all">All</button>
+        <button class="chip" role="tab" aria-selected="false" data-filter="starters">Starters</button>
+        <button class="chip" role="tab" aria-selected="false" data-filter="sandwiches">Sandwiches</button>
+        <button class="chip" role="tab" aria-selected="false" data-filter="noodles">Noodles</button>
+        <button class="chip" role="tab" aria-selected="false" data-filter="mains">Mains</button>
+        <button class="chip" role="tab" aria-selected="false" data-filter="beverages">Beverages</button>
+        <button class="chip" role="tab" aria-selected="false" data-filter="desserts">Desserts</button>
+      </div>
+    </div>
+
+    <div id="menu-grid" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Item 1 -->
+      <article class="menu-card card-lift group bg-charcoal border border-cream/10 flex flex-col" data-cat="sandwiches" data-reveal style="--d:.06s">
+        <div class="zoomwrap aspect-[4/3]">
+          <img loading="lazy" class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=72"
+               data-fallback="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=72"
+               alt="Grilled veg sandwich served on a dark wooden board with fries and a dip at LICA">
+          <span class="absolute top-4 left-4 text-[.58rem] tracking-[.28em] uppercase font-cinema bg-charcoal/85 text-gold px-3 py-1.5">Sandwiches</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display text-2xl">Grilled Veg Sandwich</h3>
+          <p class="mt-3 text-sm text-cream/60 leading-relaxed flex-1">Grilled golden and served on a dark wooden board with fries and a dip on the side.</p>
+          <div class="mt-6 flex items-center justify-between gap-4">
+            <span class="text-[.62rem] tracking-[.22em] uppercase text-muted">Ask for today’s price</span>
+            <a href="tel:07002196780" class="btn btn-amber !py-2.5 !px-5">Order</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="menu-card card-lift group bg-charcoal border border-cream/10 flex flex-col" data-cat="noodles" data-reveal style="--d:.12s">
+        <div class="zoomwrap aspect-[4/3]">
+          <img loading="lazy" class="w-full h-full object-cover"
+               src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=900&q=72"
+               data-fallback="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=72"
+               alt="Veg Hakka noodles with vegetables served on a white ceramic plate at LICA">
+          <span class="absolute top-4 left-4 text-[.58rem] tracking-[.28em] uppercase font-cinema bg-charcoal/85 text-gold px-3 py-1.5">Noodles</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display text-2xl">Veg Hakka Noodles</h3>
+          <p class="mt-3 text-sm text-cream/60 leading-relaxed flex-1">Stir-fried noodles tossed with vegetables, served simply on a white ceramic plate.</p>
+          <div class="mt-6 flex items-center justify-between gap-4">
+            <span class="text-[.62rem] tracking-[.22em] uppercase text-muted">Ask for today’s price</span>
+            <a href="tel:07002196780" class="btn btn-amber !py-2.5 !px-5">Order</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Kitchen note card -->
+      <aside class="bg-[#1b1712] border border-dashed border-cream/15 p-8 flex flex-col justify-center" data-reveal style="--d:.18s">
+        <svg viewBox="0 0 64 48" class="w-14 h-10 text-amber" aria-hidden="true">
+          <rect x="1.5" y="17.5" width="61" height="29" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M1.5 17.5l6-15 61 0-6 15z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M13 3l-6 15M28 3l-6 15M43 3l-6 15M58 3l-6 15" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <h3 class="mt-6 font-display text-2xl leading-snug">More is being added to the menu.</h3>
+        <p class="mt-3 text-sm text-cream/60 leading-relaxed">Only verified dishes are listed here. Our team will be happy to tell you about today’s specials and seasonal additions.</p>
+        <p class="mt-6 text-[.62rem] tracking-[.22em] uppercase text-muted">Indicative spend · ₹200–₹400 per person</p>
+      </aside>
+    </div>
+
+    <p id="menu-empty" class="hidden mt-10 border border-dashed border-cream/20 p-10 text-center text-cream/60">
+      Nothing listed under this category yet — call us on <a href="tel:07002196780" class="text-gold underline underline-offset-4">070021 96780</a> and we’ll tell you what’s on today.
+    </p>
+
+    <div class="mt-12 flex flex-wrap items-center gap-4" data-reveal>
+      <a href="#order" class="btn btn-amber">Order Online</a>
+      <span class="text-sm text-muted">Dine-in · Takeaway · Delivery</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE FEATURE: GRILLED VEG SANDWICH ============ -->
+<section class="relative bg-charcoal py-20 md:py-28 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <div class="order-2 lg:order-1">
+      <p class="eyebrow" data-reveal>Signature Favourite</p>
+      <h2 class="mt-4 font-cinema text-[2.4rem] sm:text-6xl lg:text-[4.5rem] leading-[.92]" data-reveal style="--d:.08s">GRILLED VEG<br>SANDWICH</h2>
+      <div class="rule-amber mt-6" data-reveal style="--d:.14s"></div>
+      <p class="mt-8 text-cream/70 leading-relaxed max-w-lg" data-reveal style="--d:.2s">
+        Grilled to order and laid out on a dark wooden board — crisp, warm and served with fries and a small ramekin of dip. It is the plate that keeps coming back to tables at LICA, best enjoyed slowly, under amber light.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3" data-reveal style="--d:.26s">
+        <a href="tel:07002196780" class="btn btn-amber">Order This</a>
+        <a href="#menu" class="btn btn-ghost">View Menu</a>
+      </div>
+      <dl class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-lg text-sm" data-reveal style="--d:.32s">
+        <div><dt class="eyebrow">Category</dt><dd class="mt-2 text-cream/75">Sandwiches</dd></div>
+        <div><dt class="eyebrow">Served With</dt><dd class="mt-2 text-cream/75">Fries &amp; dip</dd></div>
+        <div><dt class="eyebrow">Best For</dt><dd class="mt-2 text-cream/75">Any hour, really</dd></div>
+      </dl>
+    </div>
+    <div class="order-1 lg:order-2">
+      <div class="zoomwrap aspect-[4/3] lg:aspect-[5/4]" data-reveal="mask">
+        <img loading="lazy" class="w-full h-full object-cover"
+             src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1300&q=75"
+             data-fallback="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1300&q=75"
+             alt="Grilled veg sandwich on a dark wooden board with fries and a small white ramekin of orange sauce">
+        <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_60%_40%,rgba(217,154,50,.12),transparent_65%)]"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: VEG HAKKA NOODLES ============ -->
+<section class="relative bg-brown/60 py-20 md:py-28">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <div class="zoomwrap aspect-[4/3] lg:aspect-[5/4]" data-reveal="mask">
+      <img loading="lazy" class="w-full h-full object-cover"
+           src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1300&q=75"
+           data-fallback="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=1300&q=75"
+           alt="Veg Hakka noodles with vegetables on a large white ceramic plate under warm café lighting">
+    </div>
+    <div>
+      <p class="eyebrow" data-reveal>Comfort In Every Bite</p>
+      <h2 class="mt-4 font-cinema text-[2.4rem] sm:text-6xl lg:text-[4.5rem] leading-[.92]" data-reveal style="--d:.08s">VEG HAKKA<br>NOODLES</h2>
+      <div class="rule-amber mt-6" data-reveal style="--d:.14s"></div>
+      <p class="mt-8 text-cream/70 leading-relaxed max-w-lg" data-reveal style="--d:.2s">
+        A generous plate of noodles and vegetables, served simply and photographed honestly — no fuss, just the kind of food you reach for on an easy evening with friends at a café in Beltola.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3" data-reveal style="--d:.26s">
+        <a href="tel:07002196780" class="btn btn-amber">Order This</a>
+        <a href="#gallery" class="btn btn-ghost">See The Gallery</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE: LIGHT. CAMERA. LICA. ============ -->
+<section id="experience" class="relative bg-ink py-24 md:py-36 overflow-hidden grain">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(217,154,50,.1),transparent_55%)]" aria-hidden="true"></div>
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+      <div class="lg:col-span-5">
+        <p class="eyebrow" data-reveal>04 — The Experience</p>
+        <h2 class="mt-4 font-cinema text-[2.6rem] sm:text-6xl lg:text-[4.6rem] leading-[.9]" data-reveal style="--d:.08s">
+          LIGHT.<br>CAMERA.<br><span class="text-gold">LICA.</span>
+        </h2>
+        <p class="mt-8 text-cream/65 leading-relaxed max-w-md" data-reveal style="--d:.16s">
+          Three simple ideas shape everything at LICA — the light you sit in, the frame you sit inside, and what happens at the table. It is a cinema themed cafe in Guwahati that behaves like a neighbourhood café.
+        </p>
+      </div>
+
+      <!-- Cinema camera SVG -->
+      <div class="lg:col-span-7">
+        <div class="draw" id="camera-art" data-reveal style="--d:.1s">
+          <svg viewBox="0 0 480 330" class="w-full h-auto max-h-[380px]" role="img" aria-label="Illustration of a classic movie camera on a tripod, inspired by the LICA café décor">
+            <defs>
+              <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#F0B84B" stop-opacity=".35"/>
+                <stop offset="100%" stop-color="#F0B84B" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="glowGrad" cx="50%" cy="50%">
+                <stop offset="0%" stop-color="#D99A32" stop-opacity=".28"/>
+                <stop offset="100%" stop-color="#D99A32" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="240" cy="180" rx="230" ry="150" fill="url(#glowGrad)"/>
+            <!-- light beam -->
+            <g class="beam"><polygon points="398,168 480,118 480,272 398,232" fill="url(#beamGrad)"/></g>
+            <g fill="none" stroke="#F4EFE5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
+              <!-- reels -->
+              <circle data-draw pathLength="1" cx="168" cy="78" r="56" style="animation-delay:.05s"/>
+              <circle data-draw pathLength="1" cx="300" cy="86" r="40" style="animation-delay:.15s"/>
+              <circle data-draw pathLength="1" cx="168" cy="78" r="14" style="animation-delay:.5s"/>
+              <circle data-draw pathLength="1" cx="300" cy="86" r="10" style="animation-delay:.55s"/>
+              <circle data-draw pathLength="1" cx="168" cy="44" r="6" stroke="#D99A32" style="animation-delay:.7s"/>
+              <circle data-draw pathLength="1" cx="136" cy="96" r="6" stroke="#D99A32" style="animation-delay:.75s"/>
+              <circle data-draw pathLength="1" cx="198" cy="98" r="6" stroke="#D99A32" style="animation-delay:.8s"/>
+              <!-- body -->
+              <rect data-draw pathLength="1" x="86" y="146" width="252" height="112" rx="8" style="animation-delay:.3s"/>
+              <path data-draw pathLength="1" d="M86 176h252" style="animation-delay:.55s"/>
+              <!-- lens -->
+              <path data-draw pathLength="1" d="M338 172 L396 156 L396 234 L338 218 Z" style="animation-delay:.65s"/>
+              <path data-draw pathLength="1" d="M396 156v78" stroke="#D99A32" style="animation-delay:.85s"/>
+              <!-- tripod -->
+              <path data-draw pathLength="1" d="M212 258 L176 322" style="animation-delay:.9s"/>
+              <path data-draw pathLength="1" d="M212 258 L248 322" style="animation-delay:.95s"/>
+              <path data-draw pathLength="1" d="M212 258 L212 310" style="animation-delay:1s"/>
+              <path data-draw pathLength="1" d="M186 258h52" style="animation-delay:.9s"/>
+            </g>
+            <circle cx="106" cy="162" r="4" fill="#D62F25"/>
+            <text x="86" y="243" fill="#8B857C" font-family="Oswald, sans-serif" font-size="11" letter-spacing="4">LICA · REEL 01</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- three concepts -->
+    <div class="mt-20 md:mt-28 grid md:grid-cols-3 gap-px bg-cream/10">
+      <div class="bg-ink p-8 md:p-10 group" data-reveal style="--d:.05s">
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-red" aria-hidden="true"></span>
+          <span class="eyebrow">Concept 01</span>
+        </div>
+        <h3 class="mt-6 font-display text-4xl md:text-5xl">LIGHT</h3>
+        <p class="mt-4 text-cream/60 leading-relaxed">Warm lighting and an inviting atmosphere.</p>
+        <div class="mt-8 h-px w-0 bg-amber transition-all duration-700 group-hover:w-full" aria-hidden="true"></div>
+      </div>
+      <div class="bg-ink p-8 md:p-10 group" data-reveal style="--d:.12s">
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-red" aria-hidden="true"></span>
+          <span class="eyebrow">Concept 02</span>
+        </div>
+        <h3 class="mt-6 font-display text-4xl md:text-5xl">CAMERA</h3>
+        <p class="mt-4 text-cream/60 leading-relaxed">A visual identity inspired by film and photography.</p>
+        <div class="mt-8 h-px w-0 bg-amber transition-all duration-700 group-hover:w-full" aria-hidden="true"></div>
+      </div>
+      <div class="bg-ink p-8 md:p-10 group" data-reveal style="--d:.19s">
+        <div class="flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-red" aria-hidden="true"></span>
+          <span class="eyebrow">Concept 03</span>
+        </div>
+        <h3 class="mt-6 font-display text-4xl md:text-5xl">ACTION</h3>
+        <p class="mt-4 text-cream/60 leading-relaxed">Food, conversations and memorable moments.</p>
+        <div class="mt-8 h-px w-0 bg-amber transition-all duration-700 group-hover:w-full" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- small film strip motif -->
+<div class="filmstrip" aria-hidden="true"><div class="perf"></div><div class="perf rev"></div></div>
+
+<!-- ============ INSIDE LICA ============ -->
+<section class="relative bg-charcoal py-24 md:py-32">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p class="eyebrow" data-reveal>05 — The Room</p>
+        <h2 class="mt-4 font-cinema text-[2.4rem] sm:text-6xl lg:text-7xl leading-[.95]" data-reveal style="--d:.08s">INSIDE LICA</h2>
+      </div>
+      <p class="text-cream/60 max-w-md leading-relaxed" data-reveal style="--d:.14s">
+        Dark ceilings and wooden beams, warm amber pendant lamps, hanging greenery and wooden shelves, cinema camera artwork on the walls and a neon-style LICA sign over warm brown seating.
+      </p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+      <figure class="col-span-2 lg:row-span-2 zoomwrap group relative aspect-[4/3] lg:aspect-auto lg:min-h-[440px]" data-reveal="mask">
+        <img loading="lazy" class="w-full h-full object-cover"
+             src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=72"
+             data-fallback="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=72"
+             alt="Dark ceiling and wooden beams with warm lighting inside LICA café">
+        <figcaption class="absolute left-0 bottom-0 p-5 bg-gradient-to-t from-charcoal to-transparent w-full">
+          <span class="eyebrow">Dark ceiling · Wooden beams</span>
+        </figcaption>
+      </figure>
+
+      <figure class="zoomwrap group relative aspect-square" data-reveal="mask" style="--d:.08s">
+        <img loading="lazy" class="w-full h-full object-cover"
+             src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=72"
+             data-fallback="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=72"
+             alt="Warm brown seating and cosy café corner at LICA">
+        <figcaption class="absolute left-0 bottom-0 p-4 bg-gradient-to-t from-charcoal to-transparent w-full">
+          <span class="eyebrow">Warm brown seating</span>
+        </figcaption>
+      </figure>
+
+      <figure class="zoomwrap group relative aspect-square" data-reveal="mask" style="--d:.14s">
+        <img loading="lazy" class="w-full h-full object-cover"
+             src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=72"
+             data-fallback="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=72"
+             alt="Warm amber pendant lamps glowing above the tables at LICA">
+        <figcaption class="absolute left-0 bottom-0 p-4 bg-gradient-to-t from-charcoal to-transparent w-full">
+          <span class="eyebrow">Amber pendant lamps</span>
+        </figcaption>
+      </figure>
+
+      <figure class="zoomwrap group relative aspect-square" data-reveal="mask" style="--d:.2s">
+        <img loading="lazy" class="w-full h-full object-cover"
+             src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=72"
+             data-fallback="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=72"
+             alt="Hanging greenery and wooden shelves in the LICA café">
+        <figcaption class="absolute left-0 bottom-0 p-4 bg-gradient-to-t from-charcoal to-transparent w-full">
+          <span class="eyebrow">Greenery · Shelves</span>
+        </figcaption>
+      </figure>
+
+      <!-- Neon-style LICA sign tile (designed, not stock) -->
+      <figure class="relative aspect-square bg-[#1a140e] border border-cream/10 flex items-center justify-center overflow-hidden" data-reveal style="--d:.26s">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(217,154,50,.18),transparent_65%)]" aria-hidden="true"></div>
+        <div class="relative text-center px-4">
+          <span class="font-cinema text-3xl sm:text-4xl tracking-[.36em] text-gold" style="text-shadow:0 0 14px rgba(240,184,75,.55), 0 0 34px rgba(217,154,50,.3)">LICA</span>
+          <span class="block mt-3 text-[.55rem] tracking-[.32em] uppercase text-muted">Neon-style sign</span>
+        </div>
+        <span class="absolute inset-2 border border-cream/10 pointer-events-none" aria-hidden="true"></span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATMOSPHERE ============ -->
+<section class="relative atmos-bg bg-cover bg-center grain py-28 md:py-44"
+         style="background-image:linear-gradient(180deg,rgba(14,13,12,.86),rgba(14,13,12,.82)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=70');">
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="max-w-3xl">
+      <p class="eyebrow" data-reveal>06 — Atmosphere</p>
+      <h2 class="mt-5 font-display text-[2.6rem] sm:text-6xl lg:text-7xl leading-[1.02]" data-reveal style="--d:.08s">
+        NOT JUST A TABLE.<br><span class="text-gold">A MOMENT.</span>
+      </h2>
+      <p class="mt-8 font-display italic text-2xl md:text-3xl leading-snug text-cream/85" data-reveal style="--d:.16s">
+        “Warm lights. Good food. Easy conversations. A little bit of cinema in the atmosphere.”
+      </p>
+      <div class="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-[.68rem] tracking-[.26em] uppercase text-muted" data-reveal style="--d:.24s">
+        <span>Wooden interiors</span><span class="text-amber">/</span>
+        <span>Film-inspired décor</span><span class="text-amber">/</span>
+        <span>Casual dining</span><span class="text-amber">/</span>
+        <span>Guwahati</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="relative bg-brown/50 py-24 md:py-32">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p class="eyebrow" data-reveal>07 — Contact Sheet</p>
+        <h2 class="mt-4 font-cinema text-[2.4rem] sm:text-6xl lg:text-7xl leading-[.95]" data-reveal style="--d:.08s">THE LICA GALLERY</h2>
+      </div>
+      <p class="text-cream/60 max-w-sm leading-relaxed text-sm" data-reveal style="--d:.14s">Exterior, interiors, food, lighting, cinema artwork, seating and branding — select a frame to view it larger.</p>
+    </div>
+
+    <div class="mt-10 -mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto" data-reveal style="--d:.18s">
+      <div class="flex gap-2.5 min-w-max pb-1" role="tablist" aria-label="Gallery categories">
+        <button class="chip active" role="tab" aria-selected="true" data-gfilter="all">All</button>
+        <button class="chip" role="tab" aria-selected="false" data-gfilter="exterior">Exterior</button>
+        <button class="chip" role="tab" aria-selected="false" data-gfilter="interior">Interior</button>
+        <button class="chip" role="tab" aria-selected="false" data-gfilter="food">Food</button>
+        <button class="chip" role="tab" aria-selected="false" data-gfilter="lighting">Lighting</button>
+        <button class="chip" role="tab" aria-selected="false" data-gfilter="cinema">Cinema Artwork</button>
+        <button class="chip" role="tab" aria-selected="false" data-gfilter="seating">Seating</button>
+        <button class="chip" role="tab" aria-selected="false" data-gfilter="branding">Branding</button>
+      </div>
+    </div>
+
+    <div id="gallery-grid" class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 grid-flow-dense"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / LOCATION ============ -->
+<section id="contact" class="relative bg-charcoal py-24 md:py-32">
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <p class="eyebrow" data-reveal>08 — Visit</p>
+        <h2 class="mt-4 font-cinema text-[2.4rem] sm:text-6xl lg:text-[4.2rem] leading-[.93]" data-reveal style="--d:.08s">FIND US IN<br>GUWAHATI</h2>
+        <div class="rule-amber mt-6" data-reveal style="--d:.14s"></div>
+
+        <div class="mt-10 space-y-8">
+          <div data-reveal style="--d:.2s">
+            <p class="eyebrow">Address</p>
+            <p class="mt-3 text-cream/85 leading-relaxed">
+              <strong class="font-cinema tracking-[.14em] text-cream">LICA – LIGHT CAMERA ACTION CAFE</strong><br>
+              1st Floor, Aruna Tower,<br>
+              Below CEC Centre,<br>
+              Lakhimi Path, Main Road,<br>
+              Beltola Tiniali, Guwahati, Assam 781028
+            </p>
+          </div>
+
+          <dl class="grid sm:grid-cols-2 gap-8" data-reveal style="--d:.26s">
+            <div>
+              <dt class="eyebrow">Hours</dt>
+              <dd class="mt-3 text-cream/85 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red animate-pulse" aria-hidden="true"></span>
+                Open · closes 11 PM
+              </dd>
+            </div>
+            <div>
+              <dt class="eyebrow">Price Indication</dt>
+              <dd class="mt-3 text-cream/85 tabular">₹200–₹400 per person</dd>
+            </div>
+            <div>
+              <dt class="eyebrow">Phone</dt>
+              <dd class="mt-3"><a href="tel:07002196780" class="text-cream/85 hover:text-gold transition-colors tabular">070021 96780</a></dd>
+            </div>
+            <div>
+              <dt class="eyebrow">Instagram</dt>
+              <dd class="mt-3"><a href="https://www.instagram.com/cafelica22" target="_blank" rel="noopener" class="text-cream/85 hover:text-gold transition-colors">@cafelica22</a></dd>
+            </div>
+          </dl>
+
+          <div data-reveal style="--d:.32s">
+            <p class="eyebrow">Services</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="text-[.62rem] tracking-[.22em] uppercase border border-cream/15 px-3 py-1.5 text-cream/70">Dine-in</span>
+              <span class="text-[.62rem] tracking-[.22em] uppercase border border-cream/15 px-3 py-1.5 text-cream/70">Takeaway</span>
+              <span class="text-[.62rem] tracking-[.22em] uppercase border border-cream/15 px-3 py-1.5 text-cream/70">Delivery</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3" data-reveal style="--d:.38s">
+            <a class="btn btn-amber" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/dir/?api=1&destination=LICA%20Light%20Camera%20Action%20Cafe%2C%201st%20Floor%2C%20Aruna%20Tower%2C%20Below%20CEC%20Centre%2C%20Lakhimi%20Path%2C%20Beltola%20Tiniali%2C%20Guwahati%2C%20Assam%20781028">Get Directions</a>
+            <a class="btn btn-ghost" href="tel:07002196780">Call The Café</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7" data-reveal style="--d:.18s">
+        <div class="relative border border-cream/12 bg-ink p-2">
+          <div class="absolute -top-px -left-px w-5 h-5 border-t-2 border-l-2 border-amber" aria-hidden="true"></div>
+          <div class="absolute -top-px -right-px w-5 h-5 border-t-2 border-r-2 border-amber" aria-hidden="true"></div>
+          <div class="absolute -bottom-px -left-px w-5 h-5 border-b-2 border-l-2 border-amber" aria-hidden="true"></div>
+          <div class="absolute -bottom-px -right-px w-5 h-5 border-b-2 border-r-2 border-amber" aria-hidden="true"></div>
+          <iframe
+            title="Map showing the location of LICA – Light Camera Action Cafe, Beltola Tiniali, Guwahati"
+            class="w-full h-[320px] md:h-[520px] grayscale-[.25] contrast-[1.05]"
+            style="border:0;filter:invert(.9) hue-rotate(180deg) contrast(.9) saturate(.6);"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=1st%20Floor%2C%20Aruna%20Tower%2C%20Below%20CEC%20Centre%2C%20Lakhimi%20Path%2C%20Beltola%20Tiniali%2C%20Guwahati%2C%20Assam%20781028&output=embed"></iframe>
+        </div>
+        <p class="mt-4 text-xs text-muted">Beltola Tiniali, Main Road · a cafe in Beltola, minutes from Beltola Tiniali crossroad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="order" class="relative bg-ink py-28 md:py-40 grain overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(217,154,50,.14),transparent_60%)]" aria-hidden="true"></div>
+  <div class="relative max-w-[1400px] mx-auto px-5 md:px-8 text-center">
+    <p class="eyebrow" data-reveal>Reservations · Takeaway · Delivery</p>
+    <h2 class="mt-6 font-cinema text-[3rem] sm:text-7xl lg:text-8xl leading-[.9]" data-reveal style="--d:.08s">YOUR TABLE<br>IS WAITING.</h2>
+    <p class="mt-8 font-display italic text-2xl md:text-3xl text-cream/85" data-reveal style="--d:.16s">
+      “Good food. Warm lights. A little cinema. Come experience LICA.”
+    </p>
+    <div class="mt-12 flex flex-wrap justify-center gap-3 md:gap-4" data-reveal style="--d:.24s">
+      <a href="#menu" class="btn btn-ghost">View Menu</a>
+      <a href="tel:07002196780" class="btn btn-amber">Order Online</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/dir/?api=1&destination=LICA%20Light%20Camera%20Action%20Cafe%2C%201st%20Floor%2C%20Aruna%20Tower%2C%20Below%20CEC%20Centre%2C%20Lakhimi%20Path%2C%20Beltola%20Tiniali%2C%20Guwahati%2C%20Assam%20781028">Get Directions</a>
+    </div>
+    <p class="mt-10 text-[.65rem] tracking-[.3em] uppercase text-muted" data-reveal style="--d:.3s">Open daily · closes 11 PM · ₹200–₹400 per person</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-charcoal">
+  <div class="filmstrip" aria-hidden="true">
+    <div class="perf"></div>
+    <div class="strip-mid"><div class="strip-track">
+      <span>END OF REEL&nbsp;·&nbsp;LICA LIGHT CAMERA ACTION CAFE&nbsp;·&nbsp;BELTOLA TINIALI, GUWAHATI&nbsp;·&nbsp;</span>
+      <span>END OF REEL&nbsp;·&nbsp;LICA LIGHT CAMERA ACTION CAFE&nbsp;·&nbsp;BELTOLA TINIALI, GUWAHATI&nbsp;·&nbsp;</span>
+      <span>END OF REEL&nbsp;·&nbsp;LICA LIGHT CAMERA ACTION CAFE&nbsp;·&nbsp;BELTOLA TINIALI, GUWAHATI&nbsp;·&nbsp;</span>
+    </div></div>
+    <div class="perf rev"></div>
+  </div>
+
+  <div class="max-w-[1400px] mx-auto px-5 md:px-8 py-16 md:py-20 grid gap-12 md:grid-cols-12">
+    <div class="md:col-span-4">
+      <div class="flex items-center gap-3">
+        <svg viewBox="0 0 44 30" class="w-10 h-8 text-cream" aria-hidden="true">
+          <rect x="1.2" y="8.2" width="41.6" height="20.4" rx="3.4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 8.2V4.4h9.4v3.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="22" cy="18.4" r="6.4" fill="none" stroke="#D99A32" stroke-width="1.5"/>
+          <circle cx="22" cy="18.4" r="2.5" fill="#D62F25"/>
+          <rect x="33.4" y="11.6" width="6" height="2.8" rx="1.2" fill="#D99A32"/>
+        </svg>
+        <span class="font-cinema tracking-[.42em] text-xl">LICA</span>
+      </div>
+      <p class="mt-5 font-display text-2xl">Light Camera Action Cafe</p>
+      <p class="mt-3 text-sm text-cream/55 leading-relaxed max-w-xs">Food, café and cinema under one warm roof — a cinema themed cafe in Guwahati, at Beltola Tiniali.</p>
+    </div>
+
+    <nav class="md:col-span-2" aria-label="Footer navigation">
+      <p class="eyebrow">Navigate</p>
+      <ul class="mt-5 space-y-3 text-sm text-cream/65">
+        <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-gold transition-colors">About</a></li>
+        <li><a href="#menu" class="hover:text-gold transition-colors">Menu</a></li>
+        <li><a href="#experience" class="hover:text-gold transition-colors">Experience</a></li>
+        <li><a href="#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="md:col-span-2">
+      <p class="eyebrow">Services</p>
+      <ul class="mt-5 space-y-3 text-sm text-cream/65">
+        <li>Dine-in</li>
+        <li>Takeaway</li>
+        <li>Delivery</li>
+        <li><a href="#order" class="hover:text-gold transition-colors">Order Online</a></li>
+      </ul>
+    </div>
+
+    <address class="md:col-span-4 not-italic">
+      <p class="eyebrow">Visit</p>
+      <p class="mt-5 text-sm text-cream/65 leading-relaxed">
+        1st Floor, Aruna Tower, Below CEC Centre,<br>
+        Lakhimi Path, Main Road, Beltola Tiniali,<br>
+        Guwahati, Assam 781028
+      </p>
+      <p class="mt-5 text-sm text-cream/65">
+        <a href="tel:07002196780" class="hover:text-gold transition-colors tabular">070021 96780</a><br>
+        <a href="https://www.instagram.com/cafelica22" target="_blank" rel="noopener" class="hover:text-gold transition-colors">@cafelica22</a>
+      </p>
+      <p class="mt-5 text-xs text-muted">Open, closes 11 PM · ₹200–₹400 per person</p>
+    </address>
+  </div>
+
+  <div class="border-t border-cream/10">
+    <div class="max-w-[1400px] mx-auto px-5 md:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted">
+      <p>© <span id="year">2025</span> LICA – Light Camera Action Cafe, Guwahati.</p>
+      <p class="tracking-[.22em] uppercase">Light · Camera · Action</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="fixed inset-0 z-[80] bg-ink/96 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+  <button id="lb-close" class="lb-btn absolute top-5 right-5 w-12 h-12 border border-cream/25 text-cream flex items-center justify-center" aria-label="Close viewer">
+    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <button id="lb-prev" class="lb-btn absolute left-3 md:left-8 w-12 h-12 border border-cream/25 text-cream flex items-center justify-center" aria-label="Previous image">
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M12 2L5 9l7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <button id="lb-next" class="lb-btn absolute right-3 md:right-8 w-12 h-12 border border-cream/25 text-cream flex items-center justify-center" aria-label="Next image">
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M6 2l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <figure class="max-w-[92vw] max-h-[86vh] flex flex-col items-center">
+    <img id="lb-img" src="" alt="" class="max-w-[92vw] max-h-[74vh] object-contain border border-cream/10">
+    <figcaption id="lb-cap" class="mt-4 text-center text-[.65rem] tracking-[.28em] uppercase text-muted"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Image fallbacks ---------- */
+  function attachFallback(img){
+    img.addEventListener('error', function handler(){
+      if(!img.dataset.step){ img.dataset.step = '1'; if(img.dataset.fallback){ img.src = img.dataset.fallback; return; } }
+      if(img.dataset.step === '1'){
+        img.dataset.step = '2';
+        var seed = encodeURIComponent((img.alt || 'lica').slice(0,30));
+        img.src = 'https://picsum.photos/seed/' + seed + '/1200/900';
+      }
+    });
+  }
+
+  /* ---------- Header on scroll ---------- */
+  var header = document.getElementById('site-header');
+  var lastY = -1;
+  function onScroll(){
+    var y = window.scrollY || window.pageYOffset;
+    if(y === lastY) return; lastY = y;
+    header.classList.toggle('scrolled', y > 40);
+  }
+  window.addEventListener('scroll', function(){ window.requestAnimationFrame(onScroll); }, {passive:true});
+  onScroll();
+
+  /* ---------- Mobile menu ---------- */
+  var toggle = document.getElementById('menu-toggle');
+  var panel  = document.getElementById('mobile-menu');
+  var closeB = document.getElementById('menu-close');
+  function openMenu(){
+    panel.classList.remove('invisible');
+    panel.style.opacity = '1';
+    requestAnimationFrame(function(){ panel.classList.add('open'); });
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+    closeB.focus();
+  }
+  function closeMenu(){
+    panel.classList.remove('open');
+    panel.style.opacity = '0';
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+    setTimeout(function(){ if(!panel.classList.contains('open')) panel.classList.add('invisible'); }, 480);
+    toggle.focus();
+  }
+  toggle.addEventListener('click', function(){
+    toggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+  });
+  closeB.addEventListener('click', closeMenu);
+  panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* ---------- Scroll reveals ---------- */
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  /* ---------- Camera path drawing ---------- */
+  var art = document.getElementById('camera-art');
+  if(art){
+    if('IntersectionObserver' in window && !reduce){
+      var io2 = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-in'); io2.unobserve(e.target); } });
+      }, {threshold:0.25});
+      io2.observe(art);
+    } else { art.classList.add('is-in'); }
+  }
+
+  /* ---------- Active nav ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('header .nav-link'));
+  var sections = navLinks.map(function(l){ return document.querySelector(l.getAttribute('href')); }).filter(Boolean);
+  if('IntersectionObserver' in window && sections.length){
+    var io3 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          navLinks.forEach(function(l){
+            l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
+          });
+        }
+      });
+    }, {threshold:0.2, rootMargin:'-25% 0px -55% 0px'});
+    sections.forEach(function(s){ io3.observe(s); });
+  }
+
+  /* ---------- Menu filter ---------- */
+  var menuGrid = document.getElementById('menu-grid');
+  var menuEmpty = document.getElementById('menu-empty');
+  document.querySelectorAll('[data-filter]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('[data-filter]').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      var f = btn.getAttribute('data-filter');
+      var visible = 0;
+      menuGrid.querySelectorAll('.menu-card').forEach(function(card){
+        var show = (f === 'all' || card.getAttribute('data-cat') === f);
+        card.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      var note = menuGrid.querySelector('aside');
+      if(note) note.style.display = (f === 'all') ? '' : 'none';
+      menuEmpty.classList.toggle('hidden', visible > 0);
+    });
+  });
+
+  /* ---------- Gallery ---------- */
+  var gallery = [
+    { cat:'exterior', span:'col-span-2 row-span-2', label:'Exterior · Beltola Tiniali',
+      src:'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1100&q=72',
+      fb:'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1100&q=72',
+      alt:'Exterior and entrance of LICA – Light Camera Action Cafe in Guwahati' },
+    { cat:'interior', span:'', label:'Interior · Wooden beams',
+      src:'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=72',
+      alt:'Interior of LICA café with dark ceiling and wooden beams' },
+    { cat:'food', span:'', label:'Food · Grilled Veg Sandwich',
+      src:'https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=72',
+      alt:'Grilled veg sandwich with fries and dip served at LICA' },
+    { cat:'lighting', span:'row-span-2', label:'Lighting · Amber pendants',
+      src:'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=72',
+      alt:'Warm amber pendant lamps lighting the café interior at LICA' },
+    { cat:'cinema', span:'', label:'Cinema artwork · Film & camera',
+      src:'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=72',
+      alt:'Cinema-inspired artwork and film references on the LICA wall' },
+    { cat:'seating', span:'', label:'Seating · Warm brown corners',
+      src:'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=72',
+      alt:'Warm brown seating and cosy tables inside LICA café' },
+    { cat:'branding', span:'', label:'Branding · LICA camera mark',
+      src:'https://images.unsplash.com/photo-1495707902641-75cac588d2e9?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1500634245200-e5245c7574ef?auto=format&fit=crop&w=900&q=72',
+      alt:'Vintage film camera reflecting the LICA cinema-inspired branding' },
+    { cat:'food', span:'', label:'Food · Veg Hakka Noodles',
+      src:'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=72',
+      alt:'Veg Hakka noodles with vegetables on a white plate at LICA' },
+    { cat:'interior', span:'col-span-2', label:'Interior · Greenery & shelves',
+      src:'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=72',
+      fb:'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1200&q=72',
+      alt:'Hanging greenery and wooden shelves in the LICA café' },
+    { cat:'beverages', span:'', label:'Beverages · Coffee at LICA',
+      src:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=72',
+      alt:'A warm cup of coffee served at LICA café in Guwahati' },
+    { cat:'exterior', span:'', label:'Exterior · Main Road, Beltola',
+      src:'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=72',
+      alt:'Street view near Beltola Tiniali where LICA is located' },
+    { cat:'cinema', span:'', label:'Cinema artwork · Reel & screen',
+      src:'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=72',
+      fb:'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=72',
+      alt:'Cinema screen and film references that inspire the LICA décor' }
+  ];
+
+  var grid = document.getElementById('gallery-grid');
+  var frag = document.createDocumentFragment();
+  gallery.forEach(function(item, i){
+    var fig = document.createElement('figure');
+    fig.className = 'g-item zoomwrap group relative cursor-pointer ' + item.span + ' aspect-square bg-brown';
+    fig.setAttribute('data-cat', item.cat);
+    fig.setAttribute('tabindex', '0');
+    fig.setAttribute('role', 'button');
+    fig.setAttribute('aria-label', 'View larger: ' + item.label);
+    fig.setAttribute('data-reveal', 'mask');
+    fig.style.setProperty('--d', (i % 4) * 0.06 + 's');
+    fig.innerHTML =
+      '<img loading="lazy" class="w-full h-full object-cover" src="' + item.src + '" data-fallback="' + item.fb + '" alt="' + item.alt + '">' +
+      '<span class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-transparent to-transparent opacity-70 group-hover:opacity-95 transition-opacity duration-500"></span>' +
+      '<figcaption class="absolute left-0 bottom-0 p-4 w-full text-[.58rem] tracking-[.24em] uppercase text-cream/85 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">' + item.label + '</figcaption>';
+    fig._index = i;
+    frag.appendChild(fig);
+  });
+  grid.appendChild(frag);
+  grid.querySelectorAll('img').forEach(attachFallback);
+  grid.querySelectorAll('[data-reveal]').forEach(function(el){
+    if('IntersectionObserver' in window && !reduce){
+      var o = new IntersectionObserver(function(en){
+        en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-in'); o.unobserve(e.target); } });
+      }, {threshold:0.1, rootMargin:'0px 0px -5% 0px'});
+      o.observe(el);
+    } else { el.classList.add('is-in'); }
+  });
+
+  document.querySelectorAll('[data-gfilter]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('[data-gfilter]').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+      var f = btn.getAttribute('data-gfilter');
+      grid.querySelectorAll('.g-item').forEach(function(el){
+        el.style.display = (f === 'all' || el.getAttribute('data-cat') === f) ? '' : 'none';
+      });
+    });
+  });
+
+  /* ---------- Lightbox ---------- */
+  var lb = document.getElementById('lightbox'),
+      lbImg = document.getElementById('lb-img'),
+      lbCap = document.getElementById('lb-cap'),
+      lbPrev = document.getElementById('lb-prev'),
+      lbNext = document.getElementById('lb-next'),
+      lbClose = document.getElementById('lb-close'),
+      current = 0, lastFocus = null;
+
+  function visibleItems(){
+    return gallery.filter(function(_, i){
+      var el = grid.querySelector('.g-item[data-cat="' + 'x' + '"]');
+      return true;
+    });
+  }
+  function currentIndexList(){
+    var list = [];
+    grid.querySelectorAll('.g-item').forEach(function(el){ if(el.style.display !== 'none') list.push(el._index); });
+    return list.length ? list : gallery.map(function(_, i){ return i; });
+  }
+  function show(idx){
+    current = idx;
+    var it = gallery[idx];
+    lbImg.src = it.src.replace(/w=\d+/, 'w=1600');
+    lbImg.alt = it.alt;
+    lbCap.textContent = it.label;
+  }
+  function openLB(idx){
+    lastFocus = document.activeElement;
+    show(idx);
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+  function closeLB(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
+  }
+  function step(dir){
+    var list = currentIndexList();
+    var pos = list.indexOf(current);
+    if(pos === -1) pos = 0;
+    var next = (pos + dir + list.length) % list.length;
+    show(list[next]);
+  }
+  grid.addEventListener('click', function(e){
+    var fig = e.target.closest('.g-item');
+    if(fig) openLB(fig._index);
+  });
+  grid.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){
+      var fig = e.target.closest('.g-item');
+      if(fig){ e.preventDefault(); openLB(fig._index); }
+    }
+  });
+  lbPrev.addEventListener('click', function(){ step(-1); });
+  lbNext.addEventListener('click', function(){ step(1); });
+  lbClose.addEventListener('click', closeLB);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLB(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) {
+      if(e.key === 'Escape' && panel.classList.contains('open')) closeMenu();
+      return;
+    }
+    if(e.key === 'Escape') closeLB();
+    if(e.key === 'ArrowLeft') step(-1);
+    if(e.key === 'ArrowRight') step(1);
+    if(e.key === 'Tab'){
+      var f = [lbClose, lbPrev, lbNext];
+      var i = f.indexOf(document.activeElement);
+      e.preventDefault();
+      var n = e.shiftKey ? (i - 1 + f.length) % f.length : (i + 1) % f.length;
+      f[n < 0 ? 0 : n].focus();
+    }
+  });
+
+  /* ---------- other images fallback ---------- */
+  document.querySelectorAll('img[data-fallback]').forEach(attachFallback);
+
+  /* ---------- year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
